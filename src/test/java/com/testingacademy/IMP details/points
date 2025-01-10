@@ -1,0 +1,78 @@
+While creating a Selenium project:-
+-Create a new Maven project
+-Give project name
+-JDK 19
+-In Archtype type quickstart it will give suggestion select that archtype (It will create a folder structure)
+-version 1.4 (Type manually)
+-In advance setting you can change your GroiupID that is foldername
+-------------------------------------------------------------------------------------
+
+--Previously we have to use 'System.property' to set up the path of drivers
+System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+
+If we are using
+Chrome then we need to setup the -> Chromedriver
+for Edge -> Edgedriver
+for Firefox -> Geckodriver
+for Safari -> Safaridriver
+--------------------------------------------------------------------------------------
+
+--How to run your Selenium first Testcase ?
+1. Create a Maven project
+2. Install dependencies like
+        a.TestNG,
+        b.Selenium,
+        c.Allure report (testNG)
+3. Installed WebBrowsers :
+        a. Chrome
+        b. Edge
+        c. Firefox
+        d. Safari
+        e. IE browser
+        f. Opera
+----------------------------------------------------------------------------------------------------------
+
+--Install the webdriver (We need to install webdriver,
+            basically we need to to set the path of browser which we are going to use)
+    -But nowadays after SELENIUM 4 -> You dont have to setup the driver
+
+Because now we are having 'SELENIUM MANAGER'
+
+the moment we add maven dependency 'SELENIUM MANAGER' downloaded automatically
+---------------------------------------------------------------------------------------------------------
+
+Selenium Architecture (Basically based on API)
+
+Search Context (Interface)
+WebDriver (Interface)
+RemoteWebDriver (Class)
+ChromiumDriver (Class)
+EdgeDriver (Class)
+
+// Edge driver is copy cloned of Chrome driver
+----------------------------------------------------------------------------------------------------------
+
+Scenarios
+1st Scenario :-
+
+1. Do want to run on Chrome or Edge ?
+ChromeDriver driver = new ChromeDriver();
+
+Mostly we will be using below 80% -
+2. Do want to run on Chrome and then change to Edge?
+WebDriver driver = new ChromeDriver();
+driver = new EdgeDriver();
+
+3. Do want to run on multiple browsers ?
+RemoteWebDriver driver (With GRID) - Advance (Last 2 Sessions)
+-----------------------------------------------------------------------------------------------------------
+
+Arguments can be find here:-
+https://peter.sh/experiments/chromium-command-line-switches/
+-----------------------------------------------------------------------------------------------------------
+
+Xpath Cheatsheet :-
+https://devhints.io/xpath
+-----------------------------------------------------------------------------------------------------------
+
+

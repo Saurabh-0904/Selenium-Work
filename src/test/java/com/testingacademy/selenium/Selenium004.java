@@ -7,18 +7,21 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-public class Selenium003 {
+public class Selenium004 {
 
     @Test
     public void testMethod(){
-        // I want to add Extension to the Edge Browser
-        // whenever I played a youtube video - I always get a add
-        // So i wanted to add a Add blocker extension
+
+        //Some EdgeOption Methods
 
         EdgeOptions edgeOptions = new EdgeOptions();
-        edgeOptions.addExtensions(new File("/Users/saura/Downloads/Adblock.crx"));
-        //Above file is first need to download then we need to give the path of that file
-        WebDriver driver = new EdgeDriver(edgeOptions);
-        driver.get("https://youtube.com");
+        //edgeOptions.addArguments("--start-maximized"); // To miximized the window
+        edgeOptions.addArguments("--window-size=800,600");
+
+        EdgeDriver driver = new EdgeDriver(edgeOptions);
+
+        driver.get("https://sdet.live");
+        driver.manage().window().maximize();
+
     }
 }

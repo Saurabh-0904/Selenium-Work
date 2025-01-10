@@ -1,31 +1,30 @@
 package com.testingacademy.selenium;
 
-import org.openqa.selenium.PageLoadStrategy;
+import io.qameta.allure.Description;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Selenium006 {
+public class Selenium007 {
 
-    @Test
-    public void testMethod() throws MalformedURLException, InterruptedException {
+    //Open app.vwo.com
+    //Print the title and get the current URL
+    //Verify the current URL is app.vwo.com
 
-        //Navigate commands
-
-        EdgeDriver driver = new EdgeDriver();
-
-        driver.get("https://bing.com");
-        //Thread.sleep(3000);
-        driver.navigate().to("https://google.com");
-        //Thread.sleep(3000);
-        driver.navigate().to(new URL("https://app.vwo.com"));
-        //Thread.sleep(3000);
-        driver.navigate().back();
-        driver.navigate().forward();
-        driver.navigate().refresh();
+    @Test(groups = "QA")
+    @Description("Verify the current URL, Title of vwo app")
+    public void vwoLogin() {
+        WebDriver driver = new EdgeDriver();
+        driver.get("https://app.vwo.com");
+        driver.manage().window().maximize();
+        System.out.println(driver.getTitle());
+        //Assert.assertEquals(driver.getTitle(), "Login - ");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://app.vwo.com/#/lin");
 
     }
+
 }

@@ -5,25 +5,28 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
 
-public class Selenium005 {
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Selenium006 {
 
     @Test
-    public void testMethod(){
+    public void testMethod() throws MalformedURLException, InterruptedException {
 
-        //Page load Strategy
+        //Navigate commands
 
-        EdgeOptions edgeOptions = new EdgeOptions();
-        edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        //above we can use
-        //NONE   -> It will not wait to load all elements
-        //EAGER  -> It also will not wait to load all elements until given condition/ expected output not found
-        //NORMAL -> It will wait to load all elements
+        EdgeDriver driver = new EdgeDriver();
 
-        EdgeDriver driver = new EdgeDriver(edgeOptions);
-
-        driver.get("https://sdet.live");
-        System.out.println(driver.getTitle());
-        driver.quit();
+        driver.get("https://bing.com");
+        driver.manage().window().maximize();
+        //Thread.sleep(3000);
+        driver.navigate().to("https://google.com");
+        //Thread.sleep(3000);
+        driver.navigate().to(new URL("https://app.vwo.com"));
+        //Thread.sleep(3000);
+        driver.navigate().back();
+        driver.navigate().forward();
+        driver.navigate().refresh();
 
     }
 }
