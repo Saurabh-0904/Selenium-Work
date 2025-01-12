@@ -11,6 +11,7 @@ import java.net.URL;
 
 public class Selenium007 {
 
+    //Positive Testcase
     //Open app.vwo.com
     //Print the title and get the current URL
     //Verify the current URL is app.vwo.com
@@ -19,11 +20,11 @@ public class Selenium007 {
     @Description("Verify the current URL, Title of vwo app")
     public void vwoLogin() {
         WebDriver driver = new EdgeDriver();
-        driver.get("https://app.vwo.com");
         driver.manage().window().maximize();
+        driver.get("https://app.vwo.com");
         System.out.println(driver.getTitle());
-        //Assert.assertEquals(driver.getTitle(), "Login - ");
-        Assert.assertEquals(driver.getCurrentUrl(), "https://app.vwo.com/#/lin");
+        Assert.assertEquals(driver.getTitle(), "Login - VWO");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://app.vwo.com/#/login");
 
     }
 
