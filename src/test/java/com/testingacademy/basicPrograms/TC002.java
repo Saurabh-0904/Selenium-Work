@@ -1,4 +1,4 @@
-package com.testingacademy;
+package com.testingacademy.basicPrograms;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;

@@ -1,4 +1,4 @@
-package com.testingacademy;
+package com.testingacademy.basicPrograms;
 
 public class TC001 {
 

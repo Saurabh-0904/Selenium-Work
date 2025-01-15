@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -16,7 +17,11 @@ import java.time.Duration;
 
 public class Selenium017 {
 
-    //
+    // To handle 'DropDowns' we have a 'Select' Class
+    // for this we have 3 methods
+    // selectByIndex(1); // here 1 is a index value
+    // selectByVisibleText("Option 1"); here option 1 is a value or text
+    // selectByValue("2"); here 2 is a value
 
     EdgeDriver driver; //Class variable declared
     
@@ -32,16 +37,23 @@ public class Selenium017 {
     @Test (groups = "QA")
     @Description("Test case #1")
     public void test1() throws InterruptedException {
+        driver.get("https://the-internet.herokuapp.com/dropdown");
+
+        WebElement dropdownList1 = driver.findElement(By.id("dropdown"));
+        Select select = new Select(dropdownList1);
+
+        //select.selectByIndex(0); // Disabled in DOM
+        //select.selectByIndex(1);  // Method 1
+        //select.selectByVisibleText("Option 1"); // Method 2
+        select.selectByValue("2"); // Method 3
 
 
-
-        driver.get("https://app.vwo.com");
-
-        
-
-    @AfterTest
-    public void closeBrowser(){
-        driver.quit();
+        Thread.sleep(3000);
     }
 
+
+        @AfterTest
+        public void closeBrowser(){
+            driver.quit();
+        }
 }

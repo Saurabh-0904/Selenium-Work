@@ -1,9 +1,8 @@
-package com.testingacademy;
+package com.testingacademy.basicPrograms;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 
 public class TC003 {
