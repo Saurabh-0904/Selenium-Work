@@ -1,7 +1,10 @@
-package com.testingacademy.PopupsHandling;
+package com.testingacademy.popupsHandling;
 
 import io.qameta.allure.Description;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
@@ -13,7 +16,7 @@ public class Selenium018 {
 
     //POPUPS
     // To handle 'Popups' we have an 'Alert' Class
-    // Popup type 1 -> Alert pop up (Alert which is having an ok button only)
+    // Popup type 1 -> Alert pop up (Only OK Button)
 
     EdgeDriver driver; //Class variable declared
     
@@ -40,9 +43,9 @@ public class Selenium018 {
         //click on alert
         Alert alert = driver.switchTo().alert();
         alert.accept();
-        //Getting text of result
+        //Getting text of a result
         String result = driver.findElement(By.id("result")).getText();
-        //Assertion to validate text of result
+        //Assertion to validate text of a result
         Assert.assertEquals(result,"You successfully clicked an alert");
 
         Thread.sleep(3000);
