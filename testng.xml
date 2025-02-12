@@ -2,9 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/saura/SeleniumPractice01/src/test/java/com/testingacademy/xPathPractice">
+          name="C:/Users/saura/SeleniumPractice01/src/test/java/com/testingacademy/checkboxesHandeling">
         <classes>
-            <class name="com.testingacademy.xPathPractice.P001">
+            <class name="com.testingacademy.checkboxesHandeling.Selenium022">
+                <methods>
+                    <include name="test1"/>
+                </methods>
             </class>
         </classes>
     </test>

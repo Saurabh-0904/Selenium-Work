@@ -39,9 +39,9 @@ public class Selenium022 {
         List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type='checkbox']"));
 
         WebElement ch1 = checkboxes.get(0);
-        ch1.click(); // checked
+        ch1.click(); // checked the checkbox
         Thread.sleep(3000);
-        ch1.click(); // unchecked
+        ch1.click(); // unchecked the checkbox
         Thread.sleep(3000);
 
 
