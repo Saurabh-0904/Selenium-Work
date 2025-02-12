@@ -14,7 +14,7 @@ public class Selenium007 {
     //Positive Testcase
     //Open app.vwo.com
     //Print the title and get the current URL
-    //Verify the current URL is app.vwo.com
+    //To verify the current URL is app.vwo.com
 
     @Test(groups = "QA")
     @Description("Verify the current URL, Title of vwo app")

@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Selenium013 {
 
-    //Exercise : Open Ebay -> search 'macmini' and print all titles present on webpage
+    //Exercise: Open Ebay -> search 'macmini' and print all titles present on webpage
 
     EdgeDriver driver; //Class variable declared
 

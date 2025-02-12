@@ -22,9 +22,6 @@ public class Selenium002 {
         //2. Upcasting -> Dynamic Dispatch
 
 
-
-
-
 /*      WebDriver driver = new EdgeDriver();
         WebDriver driver1 = new ChromeDriver();
         WebDriver driver2 = new FirefoxDriver();
@@ -33,7 +30,7 @@ public class Selenium002 {
 
         //Opera browser is removed from Selenium 4!
 
-        //WE can also write like :-
+        //WE can also write like:-
 
         SearchContext driver = new ChromeDriver(); // This concept called Dynamic Dispatch
         //Grandfather, Father, can ref to child objects - OOPs

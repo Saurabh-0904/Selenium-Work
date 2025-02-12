@@ -14,9 +14,9 @@ public class Selenium005 {
 
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        //above we can use
-        //NONE   -> It will not wait to load all elements
-        //EAGER  -> It also will not wait to load all elements until given condition/ expected output not found
+        //above, we can use
+        //NONE -> It will not wait to load all elements
+        //EAGER -> It also will not wait to load all elements until given condition/ expected output not found
         //NORMAL -> It will wait to load all elements
 
         EdgeDriver driver = new EdgeDriver(edgeOptions);

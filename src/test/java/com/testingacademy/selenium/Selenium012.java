@@ -12,17 +12,16 @@ import org.testng.annotations.Test;
 
 public class Selenium012 {
 
-    //Use of BeforeTest, Test and AfterTest
+    //Use of @BeforeTest, @Test and @AfterTest
 
-    //BeforeTest We will Open the Browser
-    //Test We will write our tests here
-    //AfterTest We will Close the Browser
+    //@BeforeTest- We will Open the Browser
+    //@Test- We will write our tests here
+    //@AfterTest- We will Close the Browser
 
-    //Advantage of adding 'BeforeTest' (Open Browser) 'AfterTest' (Close Browser) is,
-    // We can write multiple testcase
+    //The Advantage of adding 'BeforeTest' (Open Browser) 'AfterTest' (Close Browser) is,
+    // We can write multiple testcases
     //Atomic Testcases (TC who don't have any dependency)
-    //They serve single purpose
-
+    //They serve a single purpose
 
     EdgeDriver driver; //Class variable declared
 
@@ -33,13 +32,6 @@ public class Selenium012 {
         driver = new EdgeDriver();
         driver.manage().window().maximize();
     }
-
-
-
-
-
-
-
 
 
     @Test (groups = "QA")
@@ -79,19 +71,6 @@ public class Selenium012 {
         Assert.assertEquals(driver.getTitle(), "Login - VWO");
         Assert.assertEquals(driver.getCurrentUrl(), "https://app.vwo.com/#/login");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     @AfterTest
