@@ -1,83 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/saura/SeleniumPractice01">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/saura/SeleniumPractice01/src/test/java/com/testingacademy/xPathPractice">
         <classes>
-            <class name="com.testingacademy.AppTest">
-                <methods>
-                    <include name="shouldAnswerWithTrue"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.TC002">
-                <methods>
-                    <include name="vwoLogin"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.TC003">
-                <methods>
-                    <include name="vwoLogin"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium002">
-                <methods>
-                    <include name="testMethod"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium003">
-                <methods>
-                    <include name="testMethod"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium004">
-                <methods>
-                    <include name="testMethod"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium005">
-                <methods>
-                    <include name="testMethod"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium006">
-                <methods>
-                    <include name="testMethod"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium007">
-                <methods>
-                    <include name="vwoLogin"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium008">
-                <methods>
-                    <include name="testVWOLogin"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium009">
-                <methods>
-                    <include name="vwlLoginTest"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium010">
-                <methods>
-                    <include name="vwlLoginTest"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium011">
-                <methods>
-                    <include name="vwlLoginTest"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium012">
-                <methods>
-                    <include name="negativeTest"/>
-                    <include name="positiveTest"/>
-                </methods>
-            </class>
-            <class name="com.testingacademy.selenium.Selenium013">
-                <methods>
-                    <include name="test1"/>
-                </methods>
+            <class name="com.testingacademy.xPathPractice.P001">
             </class>
         </classes>
     </test>

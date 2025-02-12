@@ -33,8 +33,8 @@ for Safari -> Safaridriver
 ----------------------------------------------------------------------------------------------------------
 
 --Install the webdriver (We need to install webdriver,
-            basically we need to to set the path of browser which we are going to use)
-    -But nowadays after SELENIUM 4 -> You dont have to setup the driver
+            basically we need to set the path of browser which we are going to use)
+    -But nowadays after SELENIUM 4 -> You don't have to setup the driver
 
 Because now we are having 'SELENIUM MANAGER'
 
@@ -49,7 +49,7 @@ RemoteWebDriver (Class)
 ChromiumDriver (Class)
 EdgeDriver (Class)
 
-// Edge driver is copy cloned of Chrome driver
+// Edge driver is cloned copy of Chrome driver
 ----------------------------------------------------------------------------------------------------------
 
 Scenarios

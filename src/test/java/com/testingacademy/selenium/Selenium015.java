@@ -46,9 +46,9 @@ public class Selenium015 {
 
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
-        //wait.until(ExpectedConditions.visibilityOf(By.cssSelector("[data-qa='lufexuloga']"))); // It will give error coz we need to tell here first which element is
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-qa='lufexuloga']")));
-        WebElement loggedin_Username = driver.findElement(By.cssSelector("[data-qa='lufexuloga']"));
+        //wait.until(ExpectedConditions.visibilityOf(By.cssSelector("[data-Selenium_IMP_details='lufexuloga']"))); // It will give error coz we need to tell here first which element is
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-Selenium_IMP_details='lufexuloga']")));
+        WebElement loggedin_Username = driver.findElement(By.cssSelector("[data-Selenium_IMP_details='lufexuloga']"));
 
         System.out.println("Logged in User detail :-> " + loggedin_Username.getText());
 
