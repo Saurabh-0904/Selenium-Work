@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/saura/SeleniumPractice01/src/test/java/com/testingacademy/checkboxesHandeling">
         <classes>
-            <class name="com.testingacademy.checkboxesHandeling.Selenium022">
+            <class name="com.testingacademy.handelingCheckboxes.Selenium022">
                 <methods>
                     <include name="test1"/>
                 </methods>

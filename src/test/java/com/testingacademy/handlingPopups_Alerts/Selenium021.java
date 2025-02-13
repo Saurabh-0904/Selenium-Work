@@ -1,4 +1,4 @@
-package com.testingacademy.popupsHandling;
+package com.testingacademy.handlingPopups_Alerts;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;

@@ -1,4 +1,4 @@
-package com.testingacademy.popupsHandling;
+package com.testingacademy.handlingPopups_Alerts;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.Alert;
@@ -7,20 +7,16 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-public class Selenium019 {
+public class Selenium018 {
 
     //POPUPS
     // To handle 'Popups' we have an 'Alert' Class
-    // Popup type 1 -> Alert pop up (OK and CANCEL button)
+    // Popup type 1 -> Alert pop up (Only OK Button)
 
     EdgeDriver driver; //Class variable declared
     
@@ -37,28 +33,20 @@ public class Selenium019 {
     @Description("Test case #1")
     public void test1() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+        // Xpath -
+        // using contains - //button[contains(text(),'for JS Alert')]
+        // using attribute - //button[@onclick='jsAlert()']
 
         //Click on Element from where we will be getting alert
-        WebElement alert_elementConfirm = driver.findElement(By.xpath("//button[@onclick='jsConfirm()']"));
-        alert_elementConfirm.click();
-
-        // If we are using a AWS machine or Docker machine or if popup (alert) is loading very slowly (limited RAM)
-        //then we need to apply explicit wait
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
-        wait.until(ExpectedConditions.alertIsPresent());
-
-        //Move to alert
+        WebElement alert_element = driver.findElement(By.xpath("//button[@onclick='jsAlert()']"));
+        alert_element.click();
+        //click on alert
         Alert alert = driver.switchTo().alert();
-        //Click on the Ok button of alert
-        //alert.accept();
-        //Click on the Cancel button of alert
-        alert.dismiss();
+        alert.accept();
         //Getting text of a result
         String result = driver.findElement(By.id("result")).getText();
         //Assertion to validate text of a result
-        //Assert.assertEquals(result,"You clicked: Ok");
-        Assert.assertEquals(result,"You clicked: Cancel");
+        Assert.assertEquals(result,"You successfully clicked an alert");
 
         Thread.sleep(3000);
 

@@ -1,4 +1,4 @@
-package com.testingacademy.popupsHandling;
+package com.testingacademy.handlingPopups_Alerts;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.Alert;
@@ -16,11 +16,11 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Selenium020 {
+public class Selenium019 {
 
     //POPUPS
     // To handle 'Popups' we have an 'Alert' Class
-    // Popup type 1 -> Alert pop up (Alert which is having an ok and cancel button with a textbox only)
+    // Popup type 1 -> Alert pop up (OK and CANCEL button)
 
     EdgeDriver driver; //Class variable declared
     
@@ -39,10 +39,10 @@ public class Selenium020 {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
         //Click on Element from where we will be getting alert
-        WebElement alert_elementConfirm = driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
+        WebElement alert_elementConfirm = driver.findElement(By.xpath("//button[@onclick='jsConfirm()']"));
         alert_elementConfirm.click();
 
-        // If we are using a AWS machine or Docker machine or if popup (alert) is loading very slowly (limited RAM)
+        // If we are using an AWS machine or Docker machine or if popup (alert) is loading very slowly (Due to limited RAM),
         //then we need to apply explicit wait
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
@@ -50,17 +50,15 @@ public class Selenium020 {
 
         //Move to alert
         Alert alert = driver.switchTo().alert();
-        //Passing the String to textbox
-        alert.sendKeys("Saurabh");
         //Click on the Ok button of alert
-        alert.accept();
+        //alert.accept();
         //Click on the Cancel button of alert
-        //alert.dismiss();
+        alert.dismiss();
         //Getting text of a result
         String result = driver.findElement(By.id("result")).getText();
         //Assertion to validate text of a result
-        Assert.assertEquals(result,"You entered: Saurabh");
-        Assert.assertEquals(result,"You entered: null");
+        //Assert.assertEquals(result,"You clicked: Ok");
+        Assert.assertEquals(result,"You clicked: Cancel");
 
         Thread.sleep(3000);
 
