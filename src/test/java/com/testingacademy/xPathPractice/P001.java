@@ -12,11 +12,26 @@ import java.io.IOException;
 
 public class P001 {
 
+    WebDriver driver ;
+
+    public void screenshot(){
+
+        File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+        File des = new File("D:\\Practice\\Screenshots\\HomePage.png");
+
+        try {
+            FileHandler.copy(src,des);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
     @Step("Testcase001")
     @Test(priority = 1)
     public void test1() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
@@ -32,7 +47,7 @@ public class P001 {
     @Test(priority = 2)
     public void test2() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
@@ -52,15 +67,13 @@ public class P001 {
         Select select = new Select(dropDown1);
         select.selectByVisibleText("Audi");
 
-        File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        System.out.println(dropDown1.isDisplayed());
 
-        File des = new File("D:\\Practice\\Screenshots\\HomePage.png");
-
-        try {
-            FileHandler.copy(src,des);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if(dropDown1.isEnabled() == true){
+            screenshot();
         }
+
+
 
         //Thread.sleep(3000);
 

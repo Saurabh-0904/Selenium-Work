@@ -1,4 +1,4 @@
-package com.testingacademy.xPathPractice;
+package com.testingacademy.handlingDropdownSelectClass;
 
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
